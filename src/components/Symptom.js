@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import {AppBar, Tabs, Tab, Typography, Box} from '@material-ui/core/';
+// import Tabs from '@material-ui/core/Tabs';
+// import Tab from '@material-ui/core/Tab';
+// import Typography from '@material-ui/core/Typography';
+// import Box from '@material-ui/core/Box';
 import "../../src/App.css"
 
 import Doctor from "../img/doctor.svg";
@@ -59,7 +59,7 @@ export default function SimpleTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
+  }; 
 
   return (
     <div className={classes.root}>
@@ -259,12 +259,14 @@ export default function SimpleTabs() {
         </p>
         <p>
           Source:{" "}  
-          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-coronaviruses#:~:text=protect"
+         <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-coronaviruses#:~:text=protect"
               rel="noopener noreferrer"
               target="_blank"              
           >
               who.int
-         </a>
+         </a>        
+      
+          
         </p>
       </TabPanel>
     </div>

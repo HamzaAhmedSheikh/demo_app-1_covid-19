@@ -10,10 +10,10 @@ import "../../src/App.css"
 import Doctor from "../img/doctor.svg";
 import Distance from "../img/distance.svg"
 import CleanHand from "../img/wash-hand.svg"
-// import Home from "../img/home.svg"
-// import Call from "../img/call.svg"
-// import Workout from "../img/workout.svg"
-// import Food from "../img/food.svg"
+import Home from "../img/home.svg"
+import Call from "../img/call.svg"
+import Workout from "../img/workout.svg"
+import Food from "../img/food.svg"
 
 
 
@@ -212,15 +212,60 @@ export default function SimpleTabs() {
         >
               who.int
             </a>
-      </p>      
-
-
-
-
+      </p>  
 
       </TabPanel>
       <TabPanel value={value} index={3}>
-          hello world
+        <p>
+          To date, there are no specific vaccines or medicines for COVID-19.
+          Treatments are under investigation, and will be tested through
+          clinical trials. World Health Organization  
+        </p>
+        <hr />
+        <p>Self-care</p>
+        <p>
+          If you feel sick you should rest, drink plenty of fluid, and eat
+          nutritious food. Stay in a separate room from other family members,
+          and use a dedicated bathroom if possible. Clean and disinfect
+          frequently touched surfaces.
+        </p>
+        <p>
+          Everyone should keep a healthy lifestyle at home. Maintain a healthy
+          diet, sleep, stay active, and make social contact with loved ones
+          through the phone or internet. Children need extra love and
+          attention from adults during difficult times. Keep to regular
+          routines and schedules as much as possible.
+        </p>
+
+        <img src={Home} style={{ height: 150 }} alt="stay home"/>
+        <img src={Call} style={{ height: 250 }} alt="call"/>
+        <img src={Workout} style={{ height: 250}} alt="daily workout" />
+        <img src={Food} style={{ height: 200 }} alt="stay healthy"/>
+
+        <p>
+          It is normal to feel sad, stressed, or confused during a crisis.
+          Talking to people you trust, such as friends and family, can help.
+          If you feel overwhelmed, talk to a health worker or counsellor.
+        </p>
+
+        <p>Medical treatments</p>
+        <p>
+          If you have mild symptoms and are otherwise healthy, self-isolate
+          and contact your medical provider or a COVID-19 information line for advice.
+        </p>
+        <p>
+          Seek medical care if you have a fever, a cough, and difficulty
+          breathing. Call in advance.
+        </p>
+        <p>
+          Source:{" "}  
+          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-coronaviruses#:~:text=protect"
+              rel="noopener noreferrer"
+              target="_blank"              
+          >
+              who.int
+         </a>
+        </p>
       </TabPanel>
     </div>
   );

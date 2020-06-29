@@ -5,8 +5,15 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import "../../src/App.css"
 
 import Doctor from "../img/doctor.svg";
+import Distance from "../img/distance.svg"
+import CleanHand from "../img/wash-hand.svg"
+// import Home from "../img/home.svg"
+// import Call from "../img/call.svg"
+// import Workout from "../img/workout.svg"
+// import Food from "../img/food.svg"
 
 
 
@@ -60,8 +67,8 @@ export default function SimpleTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Overview" {...a11yProps(0)} />
           <Tab label="Symptoms" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-          <Tab label="Item Four" {...a11yProps(3)} />
+          <Tab label="Prevention" {...a11yProps(2)} />
+          <Tab label="Treatments" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} >
@@ -154,7 +161,66 @@ export default function SimpleTabs() {
 
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <p>
+        Protect yourself and others around you by knowing the facts and
+        taking appropriate precautions. Follow advice provided by your local
+        public health agency.
+      </p>
+      <hr />
+
+      <p>To prevent the spread of COVID-19:</p>  
+      <ul>
+       <li className="clean">
+        Clean your hands often. Use soap and water, or an alcohol-based  hand rub. 
+       </li>  
+       <img src={CleanHand} style={{ height: 450 }} alt="hand-wash"/>
+
+       <li className="distance"> 
+          Maintain a safe distance from anyone who is coughing or sneezing.          
+       </li>
+
+       <img src={Distance} style={{ height: 350 }} alt="distance" className="img" />
+
+       <li>Don’t touch your eyes, nose or mouth.</li>
+
+       <li>
+         Cover your nose and mouth with your bent elbow or a tissue when
+         you cough or sneeze.
+       </li>
+
+        <li>Stay home if you feel unwell.</li>
+
+        <li>
+          If you have a fever, cough and difficulty breathing, seek medical
+          attention. Call in advance.
+        </li>
+
+        <li>Follow the directions of your local health authority.</li>
+      </ul>
+
+      <p>
+        Avoiding unneeded visits to medical facilities allows healthcare
+        systems to operate more effectively, therefore protecting you and
+        others.
+      </p>
+
+      <p>
+        Source:{" "}
+        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+             rel="noopener noreferrer"
+             target="_blank"
+        >
+              who.int
+            </a>
+      </p>      
+
+
+
+
+
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+          hello world
       </TabPanel>
     </div>
   );

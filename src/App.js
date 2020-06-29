@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import  Symptom  from './components/Symptom'
 
 function App() {  
 
   return (
-    <div className="App">
-      <h1> Hello World </h1>    
+    <div>
+      <Symptom />
     </div>  
   );
 }

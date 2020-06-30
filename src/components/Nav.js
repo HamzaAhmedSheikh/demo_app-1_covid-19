@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import {AppBar, Toolbar, Typography, Button } from '@material-ui/core/';
+// import { Link,  BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import Symptom from './Symptom'
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,17 +25,23 @@ export default function ButtonAppBar() {
   const classes = useStyles();
 
   return (
+   
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>          
           <Typography variant="h6" className={classes.title}>
-            COVID-19
+             COVID-19 
           </Typography>
           <Button color="inherit">Home</Button>
           <Button color="inherit">Graphs</Button>
-          <Button color="inherit">Symptoms</Button>
+          <Button color="inherit">
+              Symptoms        
+          </Button>
         </Toolbar>
       </AppBar>
+     
     </div>
+
+       
   );
 }

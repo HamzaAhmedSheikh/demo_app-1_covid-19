@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {AppBar, Toolbar, Typography, Button } from '@material-ui/core/';
-// import { Link,  BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Symptom from './Symptom'
+import { Link }  from "react-router-dom";
+
 
 
 
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function Navbar() {
   const classes = useStyles();
 
   return (
@@ -30,13 +30,14 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>          
           <Typography variant="h6" className={classes.title}>
-             COVID-19 
+            <Link to="/"  style={{ color: "white",  textDecoration: "none"}}> COVID-19 </Link> 
           </Typography>
-          <Button color="inherit">Home</Button>
-          <Button color="inherit">Graphs</Button>
           <Button color="inherit">
-              Symptoms        
-          </Button>
+            <Link to="/"  style={{ color: "white",  textDecoration: "none"}}> Home </Link> </Button>
+          <Button color="inherit">
+            <Link to="/graph" style={{ color: "white",  textDecoration: "none"}}> Graphs </Link>  </Button>
+          <Button color="inherit">
+            <Link to="/symptom" style={{ color: "white",  textDecoration: "none"}}> Symptoms </Link>  </Button>
         </Toolbar>
       </AppBar>
      

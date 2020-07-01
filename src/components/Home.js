@@ -16,7 +16,16 @@ const useStyles = makeStyles({
         height: 200, 
         width: 365,
         padding: 12,       
-    },    
+    },  
+    cases: {
+      color: "rgba(0, 0, 255, 0.5)"
+    },
+    recover: {
+      color: 'green',
+    },
+    deaths: {
+      color: "red",
+    }  
   }); 
 
 function Home() {
@@ -24,7 +33,7 @@ function Home() {
 
     const [latest, setLatest] = useState([])
     const [results, setResults] = useState([])
-    const [searchCountry, setSearchCountry] = useState("")
+    const [searchCountries, setSearchCountries] = useState("")
 
     useEffect(() => {
         axios.all([
@@ -47,11 +56,12 @@ function Home() {
 
 
 
-    const filterCountry = results.filter(item => {
-        return searchCountry !== "" ? item.country === searchCountry : item
+    const filterCountries = results.filter(item => {
+        return searchCountries !== "" ? 
+               item.country.toLowerCase().includes(searchCountries) : item
     })
 
-    const countries = filterCountry.map((data, i) => {
+    const countries = filterCountries.map((data, i) => {
        
         return (
 
@@ -68,13 +78,13 @@ function Home() {
           <Typography gutterBottom variant="h5" component="h2">
                <strong> {data.country} </strong> 
           </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.cases}>
                 Cases {data.cases}
           </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.deaths}>
                 Deaths {data.deaths}
           </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.recover}>
                 Recovered {data.recovered}
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
@@ -147,7 +157,7 @@ function Home() {
                <TextField id="outlined-basic"
                           label="Search Your Country" 
                           variant="outlined"                          
-                          onChange={e => setSearchCountry(e.target.value)} />
+                          onChange={e => setSearchCountries(e.target.value)} />
             </form>
           </Grid>
 

@@ -10,12 +10,13 @@ const useStyles = makeStyles({
     root: {                   
       textAlign: "center",
       margin: 20,              
-      display: "inline-block",       
+      display: "inline-block",             
     },
     img: {
         height: 200, 
         width: 365,
-        padding: 12,       
+        padding: 12,    
+        color: "green"   
     },  
     cases: {
       color: "rgba(0, 0, 255, 0.5)"
@@ -25,6 +26,11 @@ const useStyles = makeStyles({
     },
     deaths: {
       color: "red",
+    },
+    input: {
+      textAlign: "center",
+      margin: 20,     
+      width: 500,      
     }  
   }); 
 
@@ -156,7 +162,8 @@ function Home() {
             <form className={classes.root} noValidate autoComplete="on">
                <TextField id="outlined-basic"
                           label="Search Your Country" 
-                          variant="outlined"                          
+                          variant="outlined" 
+                          className={classes.input}                                                  
                           onChange={e => setSearchCountries(e.target.value)} />
             </form>
           </Grid>

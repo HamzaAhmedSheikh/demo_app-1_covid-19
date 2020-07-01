@@ -16,8 +16,7 @@ const useStyles = makeStyles({
         height: 200, 
         width: 365,
         padding: 12,       
-    }
-
+    },    
   }); 
 
 function Home() {
@@ -146,9 +145,9 @@ function Home() {
 
             <form className={classes.root} noValidate autoComplete="on">
                <TextField id="outlined-basic"
-                        label="Search Your Country" 
-                        variant="outlined"
-                        onChange={e => setSearchCountry(e.target.value)} />
+                          label="Search Your Country" 
+                          variant="outlined"                          
+                          onChange={e => setSearchCountry(e.target.value)} />
             </form>
           </Grid>
 

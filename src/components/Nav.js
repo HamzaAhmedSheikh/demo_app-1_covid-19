@@ -34,8 +34,8 @@ export default function Navbar() {
           </Typography>
           <Button color="inherit">
             <Link to="/"  style={{ color: "white",  textDecoration: "none"}}> Home </Link> </Button>
-          <Button color="inherit">
-            <Link to="/graph" style={{ color: "white",  textDecoration: "none"}}> Graphs </Link>  </Button>
+         <Button color="inherit">
+             <Link to="/graph" style={{ color: "white",  textDecoration: "none"}}> Graphs </Link>  </Button>
           <Button color="inherit">
             <Link to="/symptom" style={{ color: "white",  textDecoration: "none"}}> Symptoms </Link>  </Button>
         </Toolbar>

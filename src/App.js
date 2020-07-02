@@ -16,9 +16,10 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/symptom" component={Symptom} />
         <Route path="/graph" component={Graph} />        
-      </Switch>      
-    </div>
+      </Switch>   
+    </div>      
   </Router> 
+          
   );
 }
 

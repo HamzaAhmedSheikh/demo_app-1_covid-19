@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Line } from 'react-chartjs-2';
+import axios from "axios"
 
- class Graph extends Component {
-    render() {
-        return (
-            <div>
-               <h1> Hello Graphs </h1> 
-            </div>
-        )
-    }
+function Graph () {
+
+     
+
+
+    return(
+        <strong> HELLO WORLD   </strong> 
+    )
 }
 
-export default Graph
+export default Graph;

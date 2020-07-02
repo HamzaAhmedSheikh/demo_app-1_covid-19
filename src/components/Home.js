@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
     root: {                   
       textAlign: "center",
-      margin: 20,              
+      margin: 15,              
       display: "inline-block",             
     },
     img: {

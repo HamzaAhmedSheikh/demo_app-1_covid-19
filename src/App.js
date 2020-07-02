@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Graph from './components/Graphs'
 import Symptom from './components/Symptom'
 
+
 function App() {  
 
   return (

@@ -1,24 +1,27 @@
 import React from 'react'
-import { Line } from "react-chartjs-2";
+import {Doughnut} from 'react-chartjs-2';
 
 const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],    
-    datasets: [
-      {
-        label: "First dataset",
-        data: [33, 53, 85, 41, 44, 65, 100],
-        fill: true,
-        backgroundColor: "rgba(75,192,192,0.2)",
-        borderColor: "rgba(75,192,192,1)"
-      },
-      {
-        label: "Second dataset",
-        data: [33, 25, 35, 51, 54, 76, 86],
-        fill: false,
-        borderColor: "#742774"
-      }
-    ]
-  };
+	labels: [
+		'Red',
+		'Green',
+		'Yellow'
+	],
+	datasets: [{
+		data: [300, 50, 100],
+		backgroundColor: [
+		'#FF6384',
+		'#36A2EB',
+		'#FFCE56'
+		],
+		hoverBackgroundColor: [
+		'#FF6384',
+		'#36A2EB',
+		'#FFCE56'
+		]
+	}]
+};
+  
   
 
 function Graph () {
@@ -28,7 +31,7 @@ function Graph () {
 
     return(
         <div>
-          <Line data={data} />
+          <Doughnut data={data} />
         </div>
     )
 }

@@ -3,6 +3,7 @@ import axios from "axios"
 import { Card, CardContent, Typography, Grid, CardMedia, TextField } from '@material-ui/core'
 import NumberFormat from 'react-number-format';
 
+
 import "../css/Home.css"
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -167,7 +168,7 @@ function Home() {
                           onChange={e => setSearchCountries(e.target.value)} />
             </form>
           </Grid>
-
+             
              {countries}  
                
         </div>

@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
-// import CountUp from 'react-countup'
+import { Card, CardContent, Typography, Grid  } from '@material-ui/core'
 import axios from "axios"
+import NumberFormat from 'react-number-format';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Cards () {
 
   const [latest, setLatest] = useState("")
+  
 
     useEffect(() => {
         axios.get("https://corona.lmao.ninja/v2/all")
@@ -20,36 +19,54 @@ function Cards () {
     const date = new Date(parseInt(latest.updated));
     const lastUpdated = date.toString()
 
-    return(
-        <CardDeck style={{ margin: "20px" }}>
-        <Card bg="secondary" text="white" className="text-center">          
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>  {latest.cases }   </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small>Last updated {lastUpdated}</small>
-          </Card.Footer>
-        </Card>
-        <Card bg="danger" text="white" className="text-center">          
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>  {latest.deaths}   </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small>Last updated {lastUpdated}</small>
-          </Card.Footer>
-        </Card>
-        <Card bg="success" text="white" className="text-center">          
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>  {latest.recovered}  </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small>Last updated {lastUpdated}</small>
-          </Card.Footer>
-        </Card>
-      </CardDeck>  
+    return (
+      <div className="container">
+       <Grid container spacing={3} justify="center">
+        <Grid item component={Card} xs={12} md={3} className="card">
+         <CardContent>
+           <Typography color="textSecondary" gutterBottom>  Infected  </Typography>
+            <Typography variant="h5">
+              <NumberFormat value={latest.cases}
+                            displayType={'text'}
+                            thousandSeparator={true} />
+            </Typography>
+            <Typography color="textSecondary">
+                 {new Date(lastUpdated).toDateString()} 
+            </Typography>
+            <Typography variant="body2"> Number of active cases of COVID-19 </Typography>
+         </CardContent>
+       </Grid>
+
+        <Grid item component={Card} xs={12} md={3} className="card1">
+          <CardContent>
+            <Typography color="textSecondary" gutterBottom>  Recovered  </Typography>
+            <Typography variant="h5">
+              <NumberFormat value={latest.recovered}
+                            displayType={'text'}
+                            thousandSeparator={true} />
+            </Typography>
+            <Typography color="textSecondary"> {new Date(lastUpdated).toDateString()} </Typography>
+            <Typography variant="body2"> Number of recoveries from COVID-19 </Typography>
+          </CardContent>
+        </Grid>
+
+          <Grid item component={Card} xs={12} md={3} className="card2">
+           <CardContent>
+             <Typography color="textSecondary" gutterBottom>  Deaths  </Typography>
+             <Typography variant="h5">
+               <NumberFormat value={latest.deaths}
+                             displayType={'text'}
+                             thousandSeparator={true} />
+             </Typography>
+              <Typography color="textSecondary"> {new Date(lastUpdated).toDateString()} </Typography>
+              <Typography variant="body2"> Number of death caused by COVID-19 </Typography>
+            </CardContent>
+          </Grid>
+
+          
+          </Grid>
+          </div>
+          
     )
 
 }

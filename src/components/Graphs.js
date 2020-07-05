@@ -1,6 +1,5 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 import Cards from "../components/Cards"
-import axios from "axios"
 import { Line } from "react-chartjs-2";
 
 
@@ -31,18 +30,7 @@ const data = {
 
 function Graph () {
 
-    const [latest, setLatest] = useState("")
-  
-
-    useEffect(() => {
-        axios.get("https://corona.lmao.ninja/v2/all")
-        .then(res => { setLatest(res.data) })
-        .catch(err => { console.log(err) })
-            
-    }, [])
-
-
-
+    
 
     return (
         <div>

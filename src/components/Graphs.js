@@ -9,7 +9,7 @@ const data = {
       {
         label: "First dataset",
         data: [33, 53, 85, 41, 44, 65],
-        fill: true,
+        fill: false,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)"
       },
@@ -26,10 +26,10 @@ const data = {
         borderColor: "green"
       },
       {
-        label: "Thrid dataset",
-        data: [30, 20, 35, 45, 50, 70],
+        label: "Fourth dataset",
+        data: [90, 80, 60, 77, 87, 10],
         fill: false,
-        borderColor: "green"
+        borderColor: "red"
       }
     ]
   };

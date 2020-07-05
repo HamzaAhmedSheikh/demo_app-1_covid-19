@@ -18,6 +18,18 @@ const data = {
         data: [33, 25, 35, 51, 54, 76],
         fill: false,
         borderColor: "#742774"
+      },
+      {
+        label: "Thrid dataset",
+        data: [30, 20, 35, 45, 50, 70],
+        fill: false,
+        borderColor: "green"
+      },
+      {
+        label: "Thrid dataset",
+        data: [30, 20, 35, 45, 50, 70],
+        fill: false,
+        borderColor: "green"
       }
     ]
   };

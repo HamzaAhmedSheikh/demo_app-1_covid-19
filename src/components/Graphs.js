@@ -1,53 +1,19 @@
 import React from 'react';
-import Cards from "../components/Cards"
-import { Line } from "react-chartjs-2";
+import Cards from '../components1/Cards/Cards'
+import Chart from '../components1/Charts/Chart'
+import CountryPicker from '../components1/CountryPicker/CountryPicker'
 
-
-const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-    datasets: [
-      {
-        label: "First dataset",
-        data: [33, 53, 85, 41, 44, 65],
-        fill: false,
-        backgroundColor: "rgba(75,192,192,0.2)",
-        borderColor: "rgba(75,192,192,1)"
-      },
-      {
-        label: "Second dataset",
-        data: [33, 25, 35, 51, 54, 76],
-        fill: false,
-        borderColor: "#742774"
-      },
-      {
-        label: "Thrid dataset",
-        data: [30, 20, 35, 45, 50, 70],
-        fill: false,
-        borderColor: "green"
-      },
-      {
-        label: "Fourth dataset",
-        data: [90, 80, 60, 77, 87, 10],
-        fill: false,
-        borderColor: "red"
-      }
-    ]
-  };
-  
- 
-  
-  
+import styles from '../App.module.css'
 
 
 
-function Graph () {
-
-    
+function Graph () {   
 
     return (
-        <div>
-           <Cards />
-           <Line data={data}  />
+        <div className={styles.container}>
+           <Cards />    
+           <CountryPicker />
+           <Chart />       
         </div>
     )
 }

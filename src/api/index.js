@@ -15,8 +15,6 @@ const url = "https://covid19.mathdro.id/api"
 
          return { confirmed, recovered, deaths, lastUpdate }
 
-        
-
     } catch (error) {
         
         console.log(error);

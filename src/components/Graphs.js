@@ -39,7 +39,9 @@ class Graph extends Component {
       <div className={styles.container}>
          <Cards data={ data } />    
          <CountryPicker handleCountryChange={this.handleCountryChange} />
-         <Chart  data={ data }  country={ country }/>       
+         <Chart  data={ data }  country={ country }/>  
+
+         <iframe width="1024" height="576" src="https://app.developer.here.com/coronavirus/" frameborder="0" title="map of covid-19" className={styles.map }></iframe>     
       </div>
   )
   }  

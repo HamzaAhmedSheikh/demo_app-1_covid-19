@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     input: {
       textAlign: "center",
       margin: 20,     
-      width: 500,      
+      width:  500,      
     }  
   }); 
 
@@ -160,8 +160,8 @@ function Home() {
             </Grid>
 
 
-            <form className={classes.root} noValidate autoComplete="on">
-               <TextField id="outlined-basic"
+            <form className={classes.root} xs={12} md={3} noValidate autoComplete="on">
+               <TextField id="outlined-basic"                         
                           label="Search Your Country" 
                           variant="outlined" 
                           className={classes.input}                                                  

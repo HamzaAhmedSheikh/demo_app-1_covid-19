@@ -27,12 +27,7 @@ const useStyles = makeStyles({
     },
     deaths: {
       color: "red",
-    },
-    input: {
-      textAlign: "center",
-      margin: 20,     
-      width:  500,      
-    }  
+    }      
   }); 
 
 function Home() {
@@ -43,19 +38,23 @@ function Home() {
     const [searchCountries, setSearchCountries] = useState("")
 
     useEffect(() => {
-        axios.all([
-            axios.get("https://corona.lmao.ninja/v2/all"),
-            axios.get("https://corona.lmao.ninja/v2/countries"),
-        ])
-            .then(responseArr => {
-                setLatest(responseArr[0].data)
-                setResults(responseArr[1].data)
-            })
-            .catch(err => { console.log(err) })
+      async function fetchGlobalData(){
+        const apiResponse = await fetch("https:disease.sh/v3/covid-19/all")
+        const dataFromAPI = await apiResponse.json()
+          setLatest(dataFromAPI)
+      } 
+    
+         fetchGlobalData()      
+                        
+    }, [])   
 
+    useEffect(() => {        
+      axios.get("https://disease.sh/v3/covid-19/countries")  
+      .then(responseArr => {       
+        setResults(responseArr.data)
+    })
+     .catch(err => { console.log(err) })
     }, [])
-
-
 
     const date = new Date(parseInt(latest.updated));
     const lastUpdated = date.toString()
@@ -164,7 +163,7 @@ function Home() {
                <TextField id="outlined-basic"                         
                           label="Search Your Country" 
                           variant="outlined" 
-                          className={classes.input}                                                  
+                          className="input"                                           
                           onChange={e => setSearchCountries(e.target.value)} />
             </form>
           </Grid>

@@ -17,3 +17,32 @@
     border-bottom: 10px solid rgba(255, 0, 0, 0.5)   
 }
 
+.input {
+    text-align: "center";
+    margin: 20px;     
+    width:  400px;      
+ }
+
+@media(max-width: 770px) {
+    .card {
+        margin: 2% 0;
+    }
+
+    .card1 {
+        margin: 2% 0;
+    }
+
+    .card2 {
+        margin: 2% 0 !important;
+    }
+    
+    .input {
+        width: 300px;
+    }
+}
+
+@media(max-width: 350px) {
+    .input {
+        width: 190px;
+    }
+}

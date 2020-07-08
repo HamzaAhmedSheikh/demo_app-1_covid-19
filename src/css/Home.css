@@ -69,16 +69,6 @@
     }
 }
 
-/* @media (max-width: 575.98px) {
-    .img {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-} */
-
 @media (min-width: 576px) and (max-width: 767.98px) {
     .img {
         display: flex;

@@ -64,7 +64,7 @@ function Home() {
 
     const filterCountries = results.filter(item => {
         return searchCountries !== "" ? 
-               item.country.toLowerCase().includes(searchCountries) : item
+               item.country.includes(searchCountries) : item
     })
 
     const countries = filterCountries.map((data, i) => {

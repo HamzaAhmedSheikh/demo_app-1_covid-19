@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import {AppBar, Toolbar, Typography, Button } from '@material-ui/core/';
 import { Link }  from "react-router-dom";
 
+// import logo
+
+import Logo from '../img/image.png'
+
 
 
 
@@ -30,7 +34,9 @@ export default function Navbar() {
       <AppBar position="static">
         <Toolbar>          
           <Typography variant="h6" className={classes.title}>
-            <Link to="/"  style={{ color: "white",  textDecoration: "none"}}> COVID-19 </Link> 
+            <Link to="/"  style={{ color: "white",  textDecoration: "none"}}>
+               <img src={Logo} alt="the covid-19 tracker app logo" />
+            </Link> 
           </Typography>
           <Button color="inherit">
             <Link to="/"  style={{ color: "white",  textDecoration: "none"}}> Home </Link> </Button>

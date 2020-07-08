@@ -9,10 +9,17 @@ function Cards () {
   const [latest, setLatest] = useState("")
   
 
-    useEffect(() => {
-        axios.get("https://corona.lmao.ninja/v2/all")
-        .then(res => { setLatest(res.data) })
-        .catch(err => { console.log(err) })
+     useEffect(() => {
+      async function fetchGlobalData(){
+        const apiResponse = await fetch("https://disease.sh/v3/covid-19/all")
+        const dataFromAPI = await apiResponse.json()
+          setLatest(dataFromAPI)
+      } 
+
+         fetchGlobalData()
+        // axios.get("https://disease.sh/v3/covid-19/all")
+        // .then(res => { setLatest(res.data) })
+        // .catch(err => { console.log(err) })
             
     }, [])
 

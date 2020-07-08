@@ -23,6 +23,13 @@
     width:  400px;      
  }
 
+.img {
+    height: 200px;
+    width: 365px;
+    padding: 12px;   
+    color: "green";  
+}
+
 @media(max-width: 770px) {
     .card {
         margin: 2% 0;
@@ -43,6 +50,13 @@
 
 @media(max-width: 350px) {
     .input {
-        width: 190px;
+        width: 190px;        
+    }
+
+    .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

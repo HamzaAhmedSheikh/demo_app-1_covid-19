@@ -13,12 +13,12 @@ const useStyles = makeStyles({
       margin: 15,              
       display: "inline-block",             
     },
-    img: {
-        height: 200, 
-        width: 365,
-        padding: 12,    
-        color: "green"   
-    },  
+    // img: {
+    //     height: 200, 
+    //     width: 365,
+    //     padding: 12,    
+    //     color: "green"   
+    // },  
     cases: {
       color: "rgba(0, 0, 255, 0.5)"
     },
@@ -78,7 +78,7 @@ function Home() {
           alt="Countries"
           height="140"
           image={data.countryInfo.flag} 
-          className={classes.img}         
+          className='img'         
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

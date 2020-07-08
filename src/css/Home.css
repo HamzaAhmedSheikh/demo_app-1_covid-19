@@ -27,7 +27,7 @@
     height: 200px;
     width: 365px;
     padding: 12px;   
-    color: "green";  
+    color: "green";      
 }
 
 @media(max-width: 770px) {
@@ -50,8 +50,7 @@
     .img {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: center;        
         text-align: center;
     }
 }
@@ -61,6 +60,26 @@
         width: 190px;        
     }
 
+    .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* @media (max-width: 575.98px) {
+    .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+} */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
     .img {
         display: flex;
         flex-direction: column;

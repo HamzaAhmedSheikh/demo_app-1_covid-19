@@ -80,7 +80,7 @@ function Home() {
           image={data.countryInfo.flag} 
           className='img'         
         />
-        <CardContent>
+        <CardContent >
           <Typography gutterBottom variant="h5" component="h2">
                <strong> {data.country} </strong> 
           </Typography>
